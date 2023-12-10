@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  
+  
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: black;
+  padding: 10px 10px 10px 10px;
+}
+.nav-title{
+  overflow: hidden;
+  border-right: .15em solid #9b53b6;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(40, end) infinite alternate,
+    blink-caret .75s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #9b53b6; }
+}
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: none;
+  
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    background-color: #5c5ae5;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: #9b53b6;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+}
+
+ 
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  #introcontainer{
+    margin: 0;
+    height: 300px;
+    background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  }
+  #textcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #intro{
+    margin-top: 5%;
+    text-align: center;
+    color: #000;
+  }
+  #h1ban{
+    font-size: clamp(1.875rem, 0.5469rem + 4.25vw, 2.9375rem);
+  }
+  #pban{
+    font-size: clamp(0.75rem, 0.5156rem + 0.75vw, 0.9375rem);
+  }
+  #pconts{
+   
+    
+    text-align: center;
+    
+  }
+  #sidebarmenu{
+    flex-direction: column;
+  
+    padding: 0;
+    width: 60rem;
+   }
+   #sidebarmenu1{
+    flex-direction: column;
+  
+    padding: 0;
+    width: 20rem;
+   }
+  #sidebartxt{
+    color: black;
+  }
+  #sidebartxt li {
+    color: #f44872;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 300;
+    list-style: none;
+    padding: 15px 0;
+    text-transform: capitalize;
+}
+  
+  #textunderlines{
+    text-decoration: underline #7606A9;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 0.1em;
+text-decoration-thickness: 3px;
+  }
+  #contentcontainer{
+    margin-top: 10%;
+    height: 900px;
+    display: flex;
+  }
+  
+   #content1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+   }
+   #content1 a {
+    text-decoration: none;
+   }
+   #contents2{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+   }
+   #contents2 a{
+    text-decoration: none;
+   }
+   #cards{
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.05);
+    border-radius: 8px;
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,.1);
+    cursor: pointer;
+    margin: 0 16px 32px;
+    max-height: 150px;
+    padding: 16px;
+    transition: .3s;
+    width: 250px;
+    
+   }
+   #cards h3{
+color: #7606A9;
+   }
+   #cards p{
+    font-size: 10px;
+   }
+   
+
+   #cards1{
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.05);
+    border-radius: 8px;
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,.1);
+    cursor: pointer;
+    margin: 0 16px 32px;
+    max-height: 150px;
+    padding: 16px;
+    transition: .3s;
+    width: 250px;
+    
+    
+   }
+   #cards1 h3{
+color: #7606A9;
+   }
+   #cards1 p{
+    font-size: 10px;
+   }
+
+   #cards img{
+    padding: 5px;
+    width: 100%;
+    max-width: 50px;
+    border: solid #f44872;
+    border-radius: 5px;
+    background-color: #B6BBC4;
+    border-width: 1px;
+   }
+
+
+   #cards{
+    transition: all 0.2s ease;
+    cursor: pointer; 
+  }
+#cards:hover{
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* FOOTER */
+
+
+
+
+
+
+ul {
+	list-style: none;
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 0.5px;	
+ }
+
+ul a {
+	text-decoration: none;
+	outline: none;
+	color: black;
+	transition: 0.3s;
+}
+
+ul #link:hover {
+	color: #ff9800;
+}
+
+ul #borderlist {
+	margin: 10px 0;
+	height: 10px;
+}
+
+li i {
+	margin-right: 20px;
+}
+
+
+.footer-bottom {
+	padding: 10px;
+	background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+
+/* for tablet mode view */
+
+@media screen and (max-width: 2200px) {
+	
+  #contentcontainer{
+    height: 1200px;
+  }
+}
+
+@media screen and (max-width: 1275px) {
+	.footer-items {
+		width: 50%;
+	}
+  #contentcontainer{
+    height: 1500px;
+  }
+  #sidebarmenu{
+    display: none;
+  }
+  #content1{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+	.footer-items {
+		width: 100%;
+	}
+  #sidebarmenu{
+    display: none;
+  }
+  #content1{
+    display: flex;
+    justify-content: center;
+  }
+  #contents2{
+    display: flex;
+    justify-content: center;
+  }
+  #contentcontainer{
+    height: 3000px;
+  }
+  body{
+    margin: 0;
+  }
+  #sidebarmenu1{
+    display: none;
+  }
+}
+
+/* you can toggle the media screen view accordingly by changing the (max-width: px) to your convenience */
+
+/* Thanks to Computer Conversations */
